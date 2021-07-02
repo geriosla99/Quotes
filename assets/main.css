@@ -1,0 +1,19 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: violet;
+}
+#quote-box{
+    background: #fff;
+    padding: 5em;
+    width: 20vw;
+    margin: 15em;
+    margin-left: 30em;
+}
+
+#text{
+    justify-content: center;
+}
