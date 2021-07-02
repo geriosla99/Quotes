@@ -1,6 +1,8 @@
 let body = document.getElementById("background-change");
 body.style.backgroundColor = "#0000FF"; 
 
+var botones = document.querySelector(".botones");
+
 let quotes = document.getElementById("text");
 
 document.getElementById("new-quote").addEventListener("click", function(click){
@@ -30,9 +32,16 @@ document.getElementById("new-quote").addEventListener("click", function(click){
 
     click.preventDefault();
     
+    var randomNumber = Math.floor(Math.random() * (textQuotes.length));
+    console.log(randomNumber);  
 
-    
+    document.getElementById('text').innerHTML = textQuotes[randomNumber];
+
     color += Math.random().toString(16).slice(2,8);
     body.style.backgroundColor = color; 
+    botones.style.backgroundColor = color;
+
+    document.getElementById( 'tweet-quote' ).href="https://twitter.com/intent/tweet/?text=" +  textQuotes[randomNumber];
+
 });
 
